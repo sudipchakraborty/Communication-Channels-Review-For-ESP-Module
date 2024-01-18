@@ -17,6 +17,7 @@ const char IRG_Root_X1 [] PROGMEM = R"CERT(
 // Replace with your network credentials
 const char* ssid = "";
 const char* password = "";
+string cmd="https://www.howsmyssl.com/a/check";
 
 // Create a list of certificates with the server certificate
 X509List cert(IRG_Root_X1);
@@ -66,7 +67,7 @@ void loop() {
     HTTPClient https;
 
     Serial.print("[HTTPS] begin...\n");
-    if (https.begin(client, "https://simulab.in/wp-json/rsh/v1")) {  // HTTPS     //https://www.howsmyssl.com/a/check"
+    if (https.begin(client, "https://www.howsmyssl.com/a/check"
 
       Serial.print("[HTTPS] GET...\n");
       // start connection and send HTTP header
